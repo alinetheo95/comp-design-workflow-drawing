@@ -3,9 +3,9 @@
 
 /* Style the entire body of the webpage */
 body {
-  font-family: 'Roboto', sans-serif;  /* Set the font to Roboto, with sans-serif as backup */
-  background-color: #ffffff;          /* Set background color to white */
-  color: #111;                        /* Set text color to dark gray (almost black) */
+  font-family: 'Gils Sans', sans-serif;  /* Set the font to Roboto, with sans-serif as backup */
+  background-color: #000000;          /* Set background color to white */
+  color: #ffffff;                        /* Set text color to dark gray (almost black) */
   margin: 0;                          /* Remove default spacing around the body */
   padding: 0;                         /* Remove default internal spacing */
 }
@@ -20,29 +20,20 @@ header {
   font-size: 14px;                    /* Set font size to 14 pixels */
 }
 
-/* Style the left section of the header */
-header .left {
-  color: #aaa;                        /* Set text color to light gray */
-}
-
 /* Style the center section of the header */
 header .center {
   font-weight: 400;                   /* Set font weight to normal (not bold) */
   text-align: center;                 /* Center the text horizontally */
 }
 
-/* Style the span element inside the center section */
-header .center span {
-  font-size: 12px;                    /* Make this text smaller (12 pixels) */
-  color: #888;                        /* Set text color to medium gray */
+/* Style the main project title */
+.project-title {
+  font-size: 24px;                    /* Set font size to 24 pixels (larger) */
+  font-weight: 400;
+  text-transform: uppercase;                   /* Set font weight to normal (not bold) */
+  margin-bottom: 4px;                 /* Add 4 pixels of space below this element */
 }
 
-/* Style links in the right section of the header */
-header .right a {
-  color: #000;                        /* Set link color to black */
-  text-decoration: none;              /* Remove the underline from links */
-  font-weight: 400;                   /* Set font weight to normal */
-}
 
 /* Style the main content area */
 main {
@@ -53,30 +44,30 @@ main {
 
 /* Style the project year/date */
 .project-meta {
-  font-size: 14px;                    /* Set font size to 14 pixels */
-  color: #999;                        /* Set text color to light gray */
+  font-size: 16px;                    /* Set font size to 14 pixels */
+  color: #ffffff;                        /* Set text color to light gray */
   margin-bottom: 8px;                 /* Add 8 pixels of space below this element */
-}
-
-/* Style the main project title */
-.project-title {
-  font-size: 24px;                    /* Set font size to 24 pixels (larger) */
-  font-weight: 400;                   /* Set font weight to normal (not bold) */
-  margin-bottom: 4px;                 /* Add 4 pixels of space below this element */
 }
 
 /* Style the project subtitle */
 .project-subtitle {
   font-size: 16px;                    /* Set font size to 16 pixels */
-  color: #999;                        /* Set text color to light gray */
+  color: #ffffff;                        /* Set text color to light gray */
   margin-bottom: 24px;                /* Add 24 pixels of space below this element */
 }
 
-/* Style the advisor information */
-.advisor {
-  font-size: 14px;                    /* Set font size to 14 pixels */
+/* Style the school information */
+.school {
+  font-size: 16px;                    /* Set font size to 14 pixels */
+  margin-bottom: 8px;                /* Add 40 pixels of space below this element */
+  color: #ffffff;                        /* Set text color to dark gray */
+}
+
+/* Style the program information */
+.program {
+  font-size: 16x;                    /* Set font size to 14 pixels */
   margin-bottom: 40px;                /* Add 40 pixels of space below this element */
-  color: #333;                        /* Set text color to dark gray */
+  color: #ffffff;                        /* Set text color to dark gray */
 }
 
 /* Style section titles (like "Abstract", "Motivation") */
@@ -93,12 +84,12 @@ p {
   font-size: 16px;                    /* Set font size to 16 pixels */
   line-height: 1.6;                   /* Set space between lines to 1.6 times the font size */
   margin-bottom: 24px;                /* Add 24 pixels of space below each paragraph */
-  color: #111;                        /* Set text color to dark gray (almost black) */
+  color: #ffffff;                        /* Set text color to dark gray (almost black) */
 }
 
 /* Style for our interactive button */
 button {
-  background-color: #111;             /* Set button background to dark gray */
+  background-color: #ffffff;             /* Set button background to dark gray */
   color: white;                       /* Set button text color to white */
   border: none;                       /* Remove the default button border */
   padding: 12px 24px;                 /* Add 12px top/bottom, 24px left/right spacing inside */
@@ -112,7 +103,7 @@ button {
 
 /* Change button appearance when user hovers over it */
 button:hover {
-  background-color: #333;             /* Change background to lighter gray on hover */
+  background-color: #ffffff;             /* Change background to lighter gray on hover */
 }
 
 /* Style for the message display area */
@@ -121,7 +112,6 @@ button:hover {
   line-height: 1.6;                   /* Set space between lines */
   margin-top: 20px;                   /* Add 20 pixels of space above this element */
   padding: 16px;                      /* Add 16 pixels of spacing inside the element */
-  border: 1px solid #ccc;             /* Add a light gray border around the element */
   background-color: #f9f9f9;          /* Set background color to very light gray */
   border-radius: 4px;                 /* Add slightly rounded corners */
   min-height: 20px;                   /* Set minimum height so the area is visible even when empty */

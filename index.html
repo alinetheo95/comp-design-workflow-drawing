@@ -12,7 +12,11 @@
   <!-- Load p5.js library from CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
   <!-- This loads the p5.js library which provides functions for creating graphics and animations -->
+
+  <!-- REQUIRED: Load Three.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <!-- ------------------------------------------------------------ -->
+
 
   
   <meta charset="UTF-8">
@@ -33,43 +37,21 @@
   
   <header>
     <!-- The header is typically used for navigation and site branding -->
-    
-    <div class="left">Columbia GSAPP</div>
-    <!-- This div creates a container for the left side of the header -->
-    <!-- class="left" allows us to style this specific div with CSS -->
-    
-    <div class="center">
-      <!-- This div creates a container for the center of the header -->
-      Computational Design Workflows<br>
-      <!-- This is the main text in the center -->
-      <!-- <br> creates a line break, moving the next text to a new line -->
-      <span>Exploration of Digital Objects</span>
-      <!-- span is an inline element that groups text without creating a new line -->
-      <!-- class="center" allows us to style this span differently -->
-    </div>
+    <div class="project-title">Connected Networks</div>
+    <!-- This div displays the main project title -->
+    <!-- class="project-title" allows us to style this with CSS -->
   </header>
 
   <main>
     <!-- The main tag contains the primary content of the page -->
-    
-    <div class="project-meta">2025</div>
-    <!-- This div displays the year/project metadata -->
-    <!-- class="project-meta" allows us to style this with CSS -->
-    
-    <div class="project-title">Connected Networks</div>
-    <!-- This div displays the main project title -->
-    <!-- class="project-title" allows us to style this with CSS -->
-    
     <div class="project-subtitle">Aline Theodorakis</div>
-    <!-- This div displays the student's name as a subtitle -->
-    <!-- class="project-subtitle" allows us to style this with CSS -->
+
+    <div class="section-title">Project Info</div>
+    <div class="project-meta">2025</div>
+    <div class="school">Columbia GSAPP</div>
+    <div class="program">Computational Design Workflows</div>
     
-    <div class="advisor">Advisor: Catherine Griffiths</div>
-    <!-- This div displays advisor information -->
-    <!-- <br> creates a line break -->
-    <!-- <strong> makes the text bold for emphasis -->
-    
-    <div class="section-title">Digital Objects: Spatial Canvases</div>
+    <div class="section-title">Exploration of Digital Objects: Spatial Canvases</div>
     <!-- Section heading for the p5.js canvas demonstration -->
 
     <p>Exploring the intersection between the digital and physical realms and how they evolve in reaction to computation.</p>
@@ -106,7 +88,7 @@
     <p>3D geometry that explores materials, lighting, and other rendering aspects</p>
 
     <!-- Canvas container for third p5.js sketch (three.js) --> 
-    <div id="canvas-container-4"></div>
+    <div id="threejs-container-1"></div>
  
     <!-- ------------------------------------------------------------ -->
     
@@ -121,7 +103,7 @@
   <script src="2d-drawing.js"></script>
   <script src="bouncing-ball.js"></script>
   <script src="zoom-pan.js"></script>
-  <script src="three.js"></script>
+  <script src="3d-spatial-canvas.js"></script>
 
   <!-- ------------------------------------------------------------ -->
 
