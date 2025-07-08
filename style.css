@@ -3,7 +3,7 @@
 
 /* Style the entire body of the webpage */
 body {
-  font-family: 'Gils Sans', sans-serif;  /* Set the font to Roboto, with sans-serif as backup */
+  font-family: "Courier New", Courier, monospace;  /* Set the font to Roboto, with sans-serif as backup */
   background-color: #000000;          /* Set background color to white */
   color: #ffffff;                        /* Set text color to dark gray (almost black) */
   margin: 0;                          /* Remove default spacing around the body */
