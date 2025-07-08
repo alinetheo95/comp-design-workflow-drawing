@@ -2,7 +2,6 @@
 var sketch1 = function(p) {
   var canvasWidth = 800;
   var canvasHeight = 400;
-  var gridSpacing = 40;
   var canvas;
   var circles = [];
 
@@ -30,7 +29,6 @@ var sketch1 = function(p) {
 
   p.draw = function() {
     p.background(0);
-    drawGrid();
     drawGradientConnections();
     drawAllCircles();
   };
