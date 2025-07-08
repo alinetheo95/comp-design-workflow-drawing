@@ -13,6 +13,7 @@ var sketch3 = function(p) {
   var isDragging = false;
   var lastMouseX, lastMouseY;
   var canvas;
+  var circles = []
 
   p.setup = function() {
     canvas = p.createCanvas(canvasWidth, canvasHeight);
@@ -26,20 +27,9 @@ var sketch3 = function(p) {
     p.scale(zoom);
     p.translate(-p.width / 2, -p.height / 2);
 
-    drawGrid();
     drawPrimitives();
   };
 
-  function drawGrid() {
-    p.stroke(200);
-    p.strokeWeight(1);
-    for (var x = 0; x <= p.width; x += gridSpacing) {
-      p.line(x, 0, x, p.height);
-    }
-    for (var y = 0; y <= p.height; y += gridSpacing) {
-      p.line(0, y, p.width, y);
-    }
-  }
 
   function drawPrimitives() {
     // Rectangle

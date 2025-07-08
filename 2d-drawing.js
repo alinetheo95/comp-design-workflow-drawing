@@ -33,17 +33,6 @@ var sketch1 = function(p) {
     drawAllCircles();
   };
 
-  function drawGrid() {
-    p.stroke(200);
-    p.strokeWeight(1);
-    for (var x = 0; x <= p.width; x += gridSpacing) {
-      p.line(x, 0, x, p.height);
-    }
-    for (var y = 0; y <= p.height; y += gridSpacing) {
-      p.line(0, y, p.width, y);
-    }
-  }
-
   function drawAllCircles() {
     for (let c of circles) {
       drawCircle(c.x, c.y, c.color);
