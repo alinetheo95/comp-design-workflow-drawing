@@ -13,25 +13,19 @@ body {
 /* Style the header section at the top of the page */
 header {
   display: flex;                      /* Use flexbox layout for flexible positioning */
-  justify-content: space-between;     /* Spread items evenly across the header */
+  justify-content: flex-start;     /* Spread items evenly across the header */
   align-items: center;                /* Center items vertically */
   padding: 24px 40px;                 /* Add 24px top/bottom, 40px left/right spacing inside */
-  border-bottom: 1px solid #ccc;      /* Add a light gray line at the bottom */
-  font-size: 14px;                    /* Set font size to 14 pixels */
-}
-
-/* Style the center section of the header */
-header .center {
-  font-weight: 400;                   /* Set font weight to normal (not bold) */
-  text-align: center;                 /* Center the text horizontally */
+  font-size: 24px;                    /* Set font size to 14 pixels */
 }
 
 /* Style the main project title */
-.project-title {
+header .project-title {
   font-size: 24px;                    /* Set font size to 24 pixels (larger) */
   font-weight: 400;
   text-transform: uppercase;                   /* Set font weight to normal (not bold) */
-  margin-bottom: 4px;                 /* Add 4 pixels of space below this element */
+  margin-bottom: 4px; 
+  font-size: 24px                /* Add 4 pixels of space below this element */
 }
 
 
