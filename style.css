@@ -10,22 +10,13 @@ body {
   padding: 0;                         /* Remove default internal spacing */
 }
 
-/* Style the header section at the top of the page */
-header {
-  display: flex;                      /* Use flexbox layout for flexible positioning */
-  justify-content: flex-start;     /* Spread items evenly across the header */
-  align-items: center;                /* Center items vertically */
-  padding: 24px 40px;                 /* Add 24px top/bottom, 40px left/right spacing inside */
-  font-size: 24px;                    /* Set font size to 14 pixels */
-}
-
 /* Style the main project title */
-header .project-title {
+.project-title {
   font-size: 24px;                    /* Set font size to 24 pixels (larger) */
   font-weight: 400;
   text-transform: uppercase;                   /* Set font weight to normal (not bold) */
   margin-bottom: 4px; 
-  font-size: 24px                /* Add 4 pixels of space below this element */
+  font-size: 48px                /* Add 4 pixels of space below this element */
 }
 
 
@@ -116,7 +107,6 @@ button:hover {
 #canvas-container-2,
 #canvas-container-3 {
   margin-bottom: 40px;                /* Add 40 pixels of space below each canvas */
-  border: 1px solid #eee;             /* Add a subtle border around each canvas */
   border-radius: 4px;                 /* Add slightly rounded corners */
   overflow: hidden;                   /* Ensure canvas content doesn't overflow the border */
 }
