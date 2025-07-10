@@ -17,6 +17,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <!-- ------------------------------------------------------------ -->
 
+  <!-- Add D3.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3.js/7.8.5/d3.min.js"></script>
 
   
   <meta charset="UTF-8">
@@ -90,7 +92,22 @@
     <!-- Canvas container for third p5.js sketch (three.js) --> 
     <div id="threejs-container-2"></div>
  
-    <!-- ------------------------------------------------------------ -->
+    <!-- Add this new section for D3.js -->
+    <div class="section-title">Data Visualization</div>
+    <p>Interactive data visualization using D3.js</p>
+
+    <!-- SVG container for D3.js -->
+    <div id="d3-container-1"></div>
+
+    <!-- This creates an SVG canvas -->
+    <svg width="400" height="300">
+    <!-- This draws a blue circle -->
+    <circle cx="100" cy="100" r="50" fill="blue"/>
+  
+    <!-- This draws a red rectangle -->
+    <rect x="200" y="50" width="100" height="80" fill="red"/>
+    </svg>
+
     
   </main>
   <!-- End of main content area -->
@@ -104,6 +121,7 @@
   <script src="bouncing-ball.js"></script>
   <script src="zoom-pan.js"></script>
   <script src="3d-spatial-canvas.js"></script>
+  <script src="d3-visualization.js"></script>
 
   <!-- ------------------------------------------------------------ -->
 
