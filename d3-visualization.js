@@ -1,4 +1,3 @@
-
 // d3-visualization.js
 // D3.js visualization with color transitions based on CSV data
 
@@ -24,22 +23,40 @@
   // Convert RGB arrays to CSS rgb strings
   const colors = colorScheme.map(rgb => `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`);
 
-  // SVG dimensions and margins
-  const margin = { top: 20, right: 30, bottom: 40, left: 50 };
-  const width = 400 - margin.left - margin.right;
-  const height = 300 - margin.top - margin.bottom;
+  // SVG dimensions and margins - make it larger and responsive
+  const margin = { top: 30, right: 50, bottom: 60, left: 70 };
+  
+  // Function to get responsive dimensions
+  function getResponsiveDimensions() {
+    const containerWidth = document.getElementById('d3-container-1').clientWidth || 800;
+    const responsiveWidth = Math.min(containerWidth - 40, 800); // Max 800px
+    const responsiveHeight = responsiveWidth * 0.6; // 60% aspect ratio
+    
+    return {
+      width: responsiveWidth - margin.left - margin.right,
+      height: responsiveHeight - margin.top - margin.bottom
+    };
+  }
+  
+  // Get initial dimensions
+  const dimensions = getResponsiveDimensions();
+  const width = dimensions.width;
+  const height = dimensions.height;
 
   // Check if container exists
   const container = d3.select('#d3-container-1');
   console.log('Container found:', !container.empty());
 
-  // Create SVG element
+  // Create SVG element with responsive dimensions
   const svg = container
     .append('svg')
     .attr('width', width + margin.left + margin.right)
     .attr('height', height + margin.top + margin.bottom)
-    .style('background-color', '#f0f0f0')
-    .style('border', '1px solid #ccc');
+    .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
+    .attr('preserveAspectRatio', 'xMidYMid meet')
+    .style('background-color', '#000000')
+    .style('max-width', '100%')
+    .style('height', 'auto');
 
   console.log('SVG created');
 
@@ -50,7 +67,7 @@
   // Scales
   let xScale = d3.scaleLinear().range([0, width]);
   let yScale = d3.scaleLinear().range([height, 0]);
-  let radiusScale = d3.scaleSqrt().range([5, 25]);
+  let radiusScale = d3.scaleSqrt().range([8, 40]); // Increased circle sizes
   let colorScale = d3.scaleOrdinal().range(colors);
 
   // Axes
