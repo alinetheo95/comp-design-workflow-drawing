@@ -1,5 +1,6 @@
 // nyc-rainfall-area-chart.js
 // Area chart showing NYC rainfall over time with storm events and infrastructure capacity alerts
+//temporal changes -- need to recommit to change to purple
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Loading NYC rainfall area chart...');
