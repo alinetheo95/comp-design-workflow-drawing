@@ -218,7 +218,7 @@ function createRainfallAreaChart(data) {
         .attr("class", "line")
         .attr("d", line)
         .attr("fill", "none")
-        .attr("stroke", "#4f2f3f")  // dark purple
+        .attr("stroke", "#b5266dff")  // dark purple
         .attr("stroke-width", 2);
 
     // Add infrastructure capacity threshold line
