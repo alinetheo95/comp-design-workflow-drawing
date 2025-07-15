@@ -116,37 +116,47 @@ button:hover {
   margin-bottom: 60px;                /* Extra space after the last canvas */
 }
 
-/* Updated D3 Visualization Styles */
+/* Add this to your existing style.css file */
+
+/* Style for the rainfall chart container */
 #d3-container-1 {
-  margin-bottom: 40px;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
   border-radius: 4px;
   overflow: hidden;
-  min-height: 550px; /* Increased height to fit new visualization */
-  background-color: #000000;
-  width: 100%; /* Full width of container */
-  max-width: 900px; /* Maximum width */
+  text-align: center;
+  min-height: 200px;
+  background-color: #1a1a1a;
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Make SVG responsive */
 #d3-container-1 svg {
   max-width: 100%;
   height: auto;
+  display: block;
+  border-radius: 0px;
 }
 
-/* Updated D3 Axis Styles for larger visualization */
-.axis {
-  font-size: 14px; /* Slightly larger text */
-  color: #333;
+/* Tooltip styling for the rainfall chart */
+.capacity-tooltip,
+.storm-tooltip {
+  font-family: "Courier New", Courier, monospace !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  max-width: 250px;
+  word-wrap: break-word;
 }
 
-.axis path,
-.axis line {
-  fill: none;
-  stroke: #333;
-  stroke-width: 1.5px; /* Slightly thicker lines */
-  shape-rendering: crispEdges;
+.capacity-tooltip {
+  background: rgba(255, 107, 107, 0.95) !important;
+  border: 2px solid #ff4444 !important;
 }
 
-.data-circle {
-  stroke-width: 2px; /* Thicker circle strokes */
+.storm-tooltip {
+  background: rgba(255, 165, 0, 0.95) !important;
+  border: 2px solid #ff8800 !important;
 }
