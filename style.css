@@ -160,3 +160,26 @@ button:hover {
   background: rgba(255, 165, 0, 0.95) !important;
   border: 2px solid #ff8800 !important;
 }
+
+/* Style for the rainfall chart container */
+#d3-container-2 {
+  margin-bottom: 40px;                /* Add space below the chart */
+  border-radius: 4px;                 /* Rounded corners */
+  overflow: hidden;                   /* Ensure content doesn't overflow */
+  text-align: center;                 /* Center the SVG */
+  min-height: 550px;                  /* Minimum height for the container */
+  background-color: #1a1a1a;          /* Dark background to match your theme */
+  width: 100%;                        /* Full width of container */
+  max-width: 1000px;                  /* Maximum width */
+  margin-left: auto;                  /* Center the container */
+  margin-right: auto;                 /* Center the container */
+}
+
+/* Make SVG responsive */
+#d3-container-2 svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}

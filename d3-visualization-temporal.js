@@ -186,27 +186,22 @@ function createRainfallAreaChart(data) {
         .curve(d3.curveBasis);
 
     // Add gradient definition - updated to your color scheme
+    // Solid fill color - light purple
     const gradient = svg.append("defs")
         .append("linearGradient")
         .attr("id", "areaGradient")
-        .attr("gradientUnits", "userSpaceOnUse")
-        .attr("x1", 0).attr("y1", height)
-        .attr("x2", 0).attr("y2", 0);
+        .attr("x1", 0).attr("y1", 0)
+        .attr("x2", 0).attr("y2", 1);
 
     gradient.append("stop")
         .attr("offset", "0%")
-        .attr("stop-color", "#ff6b35")  // Orange from your palette
-        .attr("stop-opacity", 0.3);  // Bottom stays slightly transparent
-
-    gradient.append("stop")
-        .attr("offset", "50%")
-        .attr("stop-color", "#f7931e")  // Mid orange
-        .attr("stop-opacity", 0.7);  // Middle more opaque
+        .attr("stop-color", "#816182")
+        .attr("stop-opacity", 1);
 
     gradient.append("stop")
         .attr("offset", "100%")
-        .attr("stop-color", "#ffcc02")  // Yellow from your palette
-        .attr("stop-opacity", 1.0);  // Top completely opaque
+        .attr("stop-color", "#816182")
+        .attr("stop-opacity", 1);
 
     // Draw the area
     g.append("path")
@@ -222,7 +217,7 @@ function createRainfallAreaChart(data) {
         .attr("class", "line")
         .attr("d", line)
         .attr("fill", "none")
-        .attr("stroke", "#ffcc02")  // Yellow from your palette
+        .attr("stroke", "#4f2f3f")  // dark purple
         .attr("stroke-width", 2);
 
     // Add infrastructure capacity threshold line
@@ -381,7 +376,7 @@ function createRainfallAreaChart(data) {
 
     // Legend items with your color palette
     const legendData = [
-        { color: "#ffcc02", label: "Monthly Rainfall", type: "line" },
+        { color: "#4f2f3f", label: "Monthly Rainfall", type: "line" },
         { color: "#ff6b35", label: "Named Storms", type: "circle" },
         { color: "#e91e63", label: "Infrastructure Exceeded", type: "circle" },
         { color: "#e91e63", label: "Capacity Threshold", type: "dashed" }
@@ -418,7 +413,8 @@ function createRainfallAreaChart(data) {
                 .attr("cx", 7)
                 .attr("cy", 0)
                 .attr("r", 4)
-                .attr("fill", d.color);
+                .attr("fill", d.color)
+
         }
         
         item.append("text")
