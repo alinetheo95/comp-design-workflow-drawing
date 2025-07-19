@@ -183,3 +183,12 @@ button:hover {
   margin: 0 auto;
   border-radius: 4px;
 }
+
+/* Basic styling for the map containers */
+#mapbox-container-1, #mapbox-container-2, #mapbox-container-3 {
+    width: 100%;
+    height: 400px;
+    margin: 40px 0;
+    display: block;
+    border: 1px solid #ccc;
+}

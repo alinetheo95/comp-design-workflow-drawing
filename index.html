@@ -15,12 +15,18 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <title>My First Mapbox Map</title>
+    <!-- Load Mapbox Stylesheet -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+     <!-- Load Mapbox GL JS library -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
 </head>
 
 <body>
   
   <header>
-    
+
   </header>
 
   <main>
@@ -85,6 +91,16 @@
 
     <!-- SVG container for D3.js -->
     <div id="d3-container-2"></div>
+
+    <div class="section-title">Geospatial Structures</div>
+    <p>description here </p>
+
+    <!-- Load the mapbox container -->
+    <div id="mapbox-container-1"></div>
+    
+    <!-- Load your custom JavaScript file -->
+    <script src="mapBox_Sketch_01.js"></script>
+
   </main>
   <!-- End of main content area -->
   
@@ -99,6 +115,7 @@
   <script src="3d-spatial-canvas.js"></script>
   <script src="d3-visualization-temporal.js"></script>
   <script src="d3-visualization-relational.js"></script>
+  <script src="mapBox_Sketch_01.js"></script>
 
   <!-- ------------------------------------------------------------ -->
 
