@@ -4,7 +4,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiYWxpbmV0aGVvIiwiYSI6ImNtZDZrbzFyeDBhd2Uya3Bze
 // Initialize the map
 const map = new mapboxgl.Map({
     container: 'mapbox-container-1',
-    style: 'mapbox://styles/mapbox/streets-v12',
+    style: 'mapbox://styles/mapbox/light-v11',
     center: [-74.006, 40.7128], // New York City
     zoom: 11
 });
@@ -31,16 +31,31 @@ map.on('load', () => {
     .setLngLat([-73.9855, 40.7580])  // Position
     .setPopup(new mapboxgl.Popup().setHTML('<h3>Times Square</h3>'))
     .addTo(map);  // Add to map
+
+// Add subway lines GeoJSON
+    fetch('nyu-2451-34758-geojson.json')  // Ensure this file is in the same directory
+        .then(res => res.json())
+        .then(data => {
+            map.addSource('subway-lines', {
+                type: 'geojson',
+                data: data
+            });
+
+            map.addLayer({
+                id: 'subway-lines-layer',
+                type: 'line',
+                source: 'subway-lines',
+                layout: {
+                    'line-join': 'round',
+                    'line-cap': 'round'
+                },
+                paint: {
+                    'line-color': '#FF5733',
+                    'line-width': 2
+                }
+            });
+        })
+        .catch(err => console.error('Error loading subway lines:', err));
+
 });
 
-// Handle map clicks
-map.on('click', (e) => {
-    const coordinates = e.lngLat;
-    console.log(`Clicked at: ${coordinates.lng}, ${coordinates.lat}`);
-    
-    // Create popup at click location
-    new mapboxgl.Popup()
-        .setLngLat(coordinates)
-        .setHTML(`<p>Longitude: ${coordinates.lng}</p>`)
-        .addTo(map);
-});
