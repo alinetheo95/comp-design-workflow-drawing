@@ -24,7 +24,7 @@ map.addControl(new mapboxgl.ScaleControl({
  // Wait for map to load before adding markers
 map.on('load', () => {
 
-    // Load subway stations GeoJSON (Point geometry)
+// Load subway stations GeoJSON (Point geometry)
     fetch('subway-stations.geojson')
         .then(response => {
             console.log('Fetch status:', response.status);
@@ -196,7 +196,7 @@ map.on('click', 'subway-stations-layer', (e) => {
     if (lines) {
         // Split lines by dash and create colored badges
         const lineArray = lines.split('-');
-        let lineHTML = '<p style="margin: 0; font-size: 12px; color: black;"><strong>Lines:</strong> ';
+        let lineHTML = '<p style="margin: 0; font-size: 12px;"><strong>Lines:</strong> ';
         lineArray.forEach((line, index) => {
             const lineColor = getLineColor(line.trim());
             lineHTML += `<span style="background-color: ${lineColor}; color: white; padding: 1px 4px; border-radius: 2px; margin: 1px; font-weight: bold; font-size: 10px;">${line.trim()}</span>`;
@@ -206,7 +206,7 @@ map.on('click', 'subway-stations-layer', (e) => {
     }
     
     new mapboxgl.Popup({
-        maxWidth: '200px',
+        maxWidth: '250px',
         closeButton: true,
         closeOnClick: false
     })
@@ -214,6 +214,22 @@ map.on('click', 'subway-stations-layer', (e) => {
         .setHTML(popupHTML)
         .addTo(map);
 });
+
+// Add custom CSS for smaller close button
+const style = document.createElement('style');
+style.textContent = `
+    .mapboxgl-popup-close-button {
+        font-size: 16px !important;
+        width: 20px !important;
+        height: 20px !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+    }
+    .mapboxgl-popup-content {
+        padding: 10px 25px 10px 10px !important;
+    }
+`;
+document.head.appendChild(style);
 
 // Helper function to get official MTA line colors
 function getLineColor(line) {
