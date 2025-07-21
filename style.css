@@ -192,3 +192,260 @@ button:hover {
     display: block;
     border: 1px solid #ccc;
 }
+
+/* ======================================== */
+/* POLL CONTAINER STYLES */
+/* ======================================== */
+
+/* Main poll container */
+.poll-container {
+  margin-bottom: 40px;                /* Space below the poll */
+  padding: 32px;                      /* Internal spacing */
+  border: 2px solid #e0e0e0;          /* Subtle border */
+  border-radius: 12px;                /* Rounded corners */
+  background-color: #fafafa;          /* Very light background */
+  text-align: center;                 /* Center all content */
+}
+
+/* Poll question styling */
+.poll-question h3 {
+  font-size: 20px;                    /* Larger font for the question */
+  font-weight: 500;                   /* Medium font weight */
+  margin-bottom: 24px;                /* Space below the question */
+  color: #333;                        /* Dark gray text */
+}
+
+/* Vote buttons container */
+.vote-buttons {
+  display: flex;                       /* Use flexbox for button layout */
+  justify-content: center;             /* Center buttons horizontally */
+  gap: 20px;                          /* Space between buttons */
+  margin-bottom: 24px;                /* Space below buttons */
+  flex-wrap: wrap;                    /* Allow buttons to wrap on small screens */
+}
+
+/* Individual vote button styling */
+.vote-btn {
+  display: flex;                       /* Use flexbox for button content */
+  flex-direction: column;              /* Stack text and count vertically */
+  align-items: center;                 /* Center content horizontally */
+  justify-content: center;             /* Center content vertically */
+  min-width: 120px;                   /* Minimum button width */
+  padding: 20px 24px;                 /* Internal spacing */
+  border: none;                        /* No border */
+  border-radius: 8px;                 /* Rounded corners */
+  font-size: 16px;                    /* Font size */
+  font-weight: 500;                   /* Medium font weight */
+  cursor: pointer;                    /* Hand cursor on hover */
+  transition: all 0.3s ease;          /* Smooth transitions */
+  font-family: 'Roboto', sans-serif;  /* Consistent font */
+  position: relative;                 /* For hover effects */
+  overflow: hidden;                   /* Hide overflow for effects */
+}
+
+/* Yes button specific styling */
+.vote-yes {
+  background: linear-gradient(135deg, #4CAF50, #45a049); /* Green gradient */
+  color: white;                       /* White text */
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3); /* Green shadow */
+}
+
+.vote-yes:hover {
+  transform: translateY(-2px);        /* Lift effect on hover */
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4); /* Enhanced shadow */
+}
+
+.vote-yes:active {
+  transform: translateY(0);           /* Return to normal on click */
+}
+
+/* No button specific styling */
+.vote-no {
+  background: linear-gradient(135deg, #f44336, #d32f2f); /* Red gradient */
+  color: white;                       /* White text */
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3); /* Red shadow */
+}
+
+.vote-no:hover {
+  transform: translateY(-2px);        /* Lift effect on hover */
+  box-shadow: 0 6px 20px rgba(244, 67, 54, 0.4); /* Enhanced shadow */
+}
+
+.vote-no:active {
+  transform: translateY(0);           /* Return to normal on click */
+}
+
+/* Vote text styling */
+.vote-text {
+  font-size: 18px;                    /* Larger font for vote text */
+  font-weight: 600;                   /* Bold font weight */
+  margin-bottom: 8px;                 /* Space below text */
+}
+
+/* Vote count styling */
+.vote-count {
+  font-size: 24px;                    /* Large font for count */
+  font-weight: 700;                   /* Bold font weight */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  padding: 4px 12px;                  /* Internal spacing */
+  border-radius: 20px;                /* Rounded background */
+  min-width: 40px;                    /* Minimum width for count */
+  display: inline-block;              /* Block display for padding */
+}
+
+/* Total votes display */
+.total-votes {
+  margin-top: 20px;                   /* Space above total */
+  padding: 16px;                      /* Internal spacing */
+  background-color: white;            /* White background */
+  border-radius: 8px;                 /* Rounded corners */
+  border: 1px solid #e0e0e0;          /* Light border */
+}
+
+.total-votes p {
+  margin: 0;                          /* Remove default margin */
+  font-size: 14px;                    /* Smaller font */
+  color: #666;                        /* Medium gray text */
+}
+
+.total-votes span {
+  font-weight: 600;                   /* Bold font weight */
+  color: #333;                        /* Dark gray text */
+}
+
+/* ======================================== */
+/* TUTORIAL STYLES */
+/* ======================================== */
+
+/* Tutorial steps container */
+.tutorial-steps {
+  margin-bottom: 40px;                /* Space below tutorial */
+}
+
+/* Individual tutorial step */
+.step {
+  margin-bottom: 24px;                /* Space between steps */
+  padding: 20px;                      /* Internal spacing */
+  background-color: #f8f9fa;          /* Light background */
+  border-left: 4px solid #007bff;     /* Blue left border */
+  border-radius: 4px;                 /* Rounded corners */
+}
+
+.step h4 {
+  margin: 0 0 8px 0;                  /* Remove default margin, add bottom margin */
+  font-size: 16px;                    /* Font size */
+  font-weight: 600;                   /* Bold font weight */
+  color: #007bff;                     /* Blue text */
+}
+
+.step p {
+  margin: 0;                          /* Remove default margin */
+  font-size: 14px;                    /* Smaller font */
+  color: #666;                        /* Medium gray text */
+  line-height: 1.5;                   /* Tighter line height */
+}
+
+/* Status display styling */
+.status-display {
+  padding: 16px;                      /* Internal spacing */
+  background-color: #f8f9fa;          /* Light background */
+  border-radius: 8px;                 /* Rounded corners */
+  border: 1px solid #e0e0e0;          /* Light border */
+  margin-bottom: 40px;                /* Space below status */
+}
+
+.status-display p {
+  margin: 0;                          /* Remove default margin */
+  font-size: 14px;                    /* Smaller font */
+  font-weight: 500;                   /* Medium font weight */
+}
+
+/* ======================================== */
+/* RESPONSIVE DESIGN */
+/* ======================================== */
+
+/* Mobile devices (screens smaller than 768px) */
+@media (max-width: 768px) {
+  main {
+    margin: 40px auto;                /* Reduce top/bottom margin */
+    padding: 0 16px;                  /* Reduce left/right padding */
+  }
+
+  header {
+    padding: 16px 20px;               /* Reduce header padding */
+    flex-direction: column;           /* Stack header items vertically */
+    gap: 8px;                         /* Space between header items */
+  }
+
+  .poll-container {
+    padding: 24px 16px;               /* Reduce poll container padding */
+  }
+
+  .vote-buttons {
+    flex-direction: column;           /* Stack buttons vertically */
+    gap: 16px;                        /* Reduce gap between buttons */
+  }
+
+  .vote-btn {
+    min-width: 100%;                  /* Full width buttons */
+    padding: 16px 20px;               /* Reduce button padding */
+  }
+
+  .vote-text {
+    font-size: 16px;                  /* Smaller font for mobile */
+  }
+
+  .vote-count {
+    font-size: 20px;                  /* Smaller count font for mobile */
+  }
+
+  .step {
+    padding: 16px;                    /* Reduce step padding */
+  }
+}
+
+/* ======================================== */
+/* ANIMATIONS */
+/* ======================================== */
+
+/* Slide in animation for vote confirmations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide out animation for vote confirmations */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Pulse animation for vote counts */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply pulse animation when vote counts update */
+.vote-count.updated {
+  animation: pulse 0.3s ease-in-out;
+}

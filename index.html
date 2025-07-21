@@ -6,6 +6,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
 
   
   <meta charset="UTF-8">
@@ -101,6 +103,74 @@
     
     <!-- Load your custom JavaScript file -->
     <script src="mapBox_Sketch_01.js"></script>
+
+    <title>Simple Poll App - Firebase Tutorial</title>
+    <!-- This is the title that appears in the browser tab and bookmarks -->
+  
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- This loads the Roboto font from Google Fonts for use on our page -->
+
+    <!-- Poll Section -->
+    <div class="section-title">Simple Poll</div>
+    <p>Click a button to vote. The results update in real-time thanks to Firebase!</p>
+    
+    <div class="poll-container">
+      <!-- Poll question -->
+      <div class="poll-question">
+        <h3>Do you like this tutorial?</h3>
+      </div>
+      
+      <!-- Vote buttons -->
+      <div class="vote-buttons">
+        <button class="vote-btn vote-yes" id="vote-yes">
+          <span class="vote-text">Yes</span>
+          <span class="vote-count" id="yes-count">0</span>
+        </button>
+        
+        <button class="vote-btn vote-no" id="vote-no">
+          <span class="vote-text">No</span>
+          <span class="vote-count" id="no-count">0</span>
+        </button>
+      </div>
+      
+      <!-- Total votes display -->
+      <div class="total-votes">
+        <p>Total votes: <span id="total-votes">0</span></p>
+      </div>
+    </div>
+
+    <!-- Tutorial Section -->
+    <div class="section-title">How It Works</div>
+    <p>
+      This app demonstrates several key Firebase concepts:
+    </p>
+    
+    <div class="tutorial-steps">
+      <div class="step">
+        <h4>1. Firebase Configuration</h4>
+        <p>We connect to Firebase using configuration settings in our JavaScript file.</p>
+      </div>
+      
+      <div class="step">
+        <h4>2. Real-time Database</h4>
+        <p>When someone votes, the data is saved to Firebase and automatically updates on all connected devices.</p>
+      </div>
+      
+      <div class="step">
+        <h4>3. Event Listeners</h4>
+        <p>Firebase listens for changes in the database and updates our UI automatically.</p>
+      </div>
+    </div>
+
+    <!-- Status Display -->
+    <div class="section-title">Connection Status</div>
+    <div id="connection-status" class="status-display">
+      <p>Connecting to Firebase...</p>
+    </div>
+  </main>
+  <!-- End of main content area -->
+  
+  <link rel="stylesheet" href="style.css">
 
   </main>
   <!-- End of main content area -->
