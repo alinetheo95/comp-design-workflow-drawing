@@ -200,10 +200,9 @@ button:hover {
 /* Main poll container */
 .poll-container {
   margin-bottom: 40px;                /* Space below the poll */
-  padding: 32px;                      /* Internal spacing */
-  border: 2px solid #e0e0e0;          /* Subtle border */
+  padding: 32px;                      /* Internal spacing */        
   border-radius: 12px;                /* Rounded corners */
-  background-color: #fafafa;          /* Very light background */
+  background-color: #000000;          /* Very light background */
   text-align: center;                 /* Center all content */
 }
 
@@ -212,7 +211,7 @@ button:hover {
   font-size: 20px;                    /* Larger font for the question */
   font-weight: 500;                   /* Medium font weight */
   margin-bottom: 24px;                /* Space below the question */
-  color: #333;                        /* Dark gray text */
+  color: #ccc;                        /* Dark gray text */
 }
 
 /* Vote buttons container */
