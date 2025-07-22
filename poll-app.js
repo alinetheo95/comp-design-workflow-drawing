@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // In a real app, you would replace these with your actual Firebase project settings
     apiKey: "AIzaSyB5BpMrZ9pAcagAXlNkSh3svH_xVd7YA1M",
     authDomain: "engagement-component.firebaseapp.com",
+    databaseURL: "https://engagement-component-default-rtdb.firebaseio.com/",
     projectId: "engagement-component",
     storageBucket: "engagement-component.firebasestorage.app",
     messagingSenderId: "410653554733",
