@@ -196,7 +196,7 @@ map.on('click', 'subway-stations-layer', (e) => {
     if (lines) {
         // Split lines by dash and create colored badges
         const lineArray = lines.split('-');
-        let lineHTML = '<p style="margin: 0; font-size: 12px;"><strong>Lines:</strong> ';
+        let lineHTML = '<p style="margin: 0; font-size: 12px; color: black;"><strong>Lines:</strong> ';
         lineArray.forEach((line, index) => {
             const lineColor = getLineColor(line.trim());
             lineHTML += `<span style="background-color: ${lineColor}; color: white; padding: 1px 4px; border-radius: 2px; margin: 1px; font-weight: bold; font-size: 10px;">${line.trim()}</span>`;
