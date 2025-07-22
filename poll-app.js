@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function() {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: #4CAF50;
+      background: #000000ff;
       color: white;
       padding: 12px 20px;
       border-radius: 4px;
