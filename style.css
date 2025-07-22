@@ -237,15 +237,15 @@ button:hover {
   font-weight: 500;                   /* Medium font weight */
   cursor: pointer;                    /* Hand cursor on hover */
   transition: all 0.3s ease;          /* Smooth transitions */
-  font-family: 'Roboto', sans-serif;  /* Consistent font */
+  font-family: "Courier New", Courier, monospace;  /* Consistent font */
   position: relative;                 /* For hover effects */
   overflow: hidden;                   /* Hide overflow for effects */
 }
 
 /* Yes button specific styling */
 .vote-yes {
-  background: linear-gradient(135deg, #4CAF50, #45a049); /* Green gradient */
-  color: white;                       /* White text */
+  background: linear-gradient(135deg, #e5e5e5ff, #e5e5e5ff); /* Green gradient */
+  color: black;                       /* White text */
   box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3); /* Green shadow */
 }
 
@@ -260,8 +260,8 @@ button:hover {
 
 /* No button specific styling */
 .vote-no {
-  background: linear-gradient(135deg, #f44336, #d32f2f); /* Red gradient */
-  color: white;                       /* White text */
+  background: linear-gradient(135deg, #e5e5e5ff, #e5e5e5ff); /* Red gradient */
+  color: black;                       /* White text */
   box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3); /* Red shadow */
 }
 
